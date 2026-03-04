@@ -232,18 +232,17 @@ Recommended flow:
 
   out.push(EMPTY);
 
-  // Warning items with ❗ [!] prefix
+  // Warning items with Karen emojis
   const warnings = [
-    "She's the Karen to your code, always demanding to see your coding \"manager\".",
-    "Uh, excuse me, but this function has way too many lines. Like, have you ever heard of refactoring before?",
-    "Are you seriously using tabs instead of spaces here? Well, I'd like to speak to your code style guide, please.",
+    { emoji: '💅', text: "She's the Karen to your code, always demanding to see your coding \"manager\"." },
+    { emoji: '🙄', text: "Uh, excuse me, but this function has way too many lines. Like, have you ever heard of refactoring before?" },
+    { emoji: '☕', text: "Are you seriously using tabs instead of spaces here? Well, I'd like to speak to your code style guide, please." },
   ];
 
-  for (const w of warnings) {
+  for (const { emoji, text: w } of warnings) {
     out.push(EMPTY);
-    // First line gets the warning prefix
-    const prefix = `${HOT}❗${RESET} ${WHITE}[!]${RESET} `;
-    const prefixVisible = 7; // "❗ [!] " = 7 visible cols (❗ is 2 cols wide)
+    const prefix = `${HOT}${emoji}${RESET} `;
+    const prefixVisible = 3; // emoji (2 cols) + space (1)
     const wrapWidth = W - prefixVisible;
     const words = w.split(/\s+/);
     const wlines = [];
