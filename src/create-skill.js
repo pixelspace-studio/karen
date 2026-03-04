@@ -16,15 +16,10 @@ export function persistSkill() {
   const pkg = JSON.parse(readFileSync(PKG_PATH, 'utf-8'));
   const version = pkg.version;
 
-  const content = `---
-name: karen-code-inspector
-version: ${version}
-description: Snarky, strict code reviewer that nitpicks correctness, consistency, tests, and security; use for PR reviews, diffs, failing CI, and "it works on my machine" code.
----
+  // Inject version into existing frontmatter
+  const withVersion = skillContent.replace(/^---\n/, `---\nversion: ${version}\n`);
 
-# Karen Code Inspector v${version}
-
-${skillContent}
+  const content = `${withVersion}
 
 ## Version
 
