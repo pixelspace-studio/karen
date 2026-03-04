@@ -1,6 +1,6 @@
 {
   "name": "@pixelspace/karen",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Karen Code Inspector — Snarky, passive-aggressive code reviewer for AI agents and humans.",
   "type": "module",
   "bin": {
