@@ -1,0 +1,38 @@
+{
+  "name": "@pixelspace/karen",
+  "version": "1.0.0",
+  "description": "Karen Code Inspector — Snarky, passive-aggressive code reviewer for AI agents and humans.",
+  "type": "module",
+  "bin": {
+    "karen": "bin/karen.js"
+  },
+  "files": [
+    "bin/",
+    "src/",
+    "content/karen-skill.md",
+    "README.md"
+  ],
+  "main": "./src/index.js",
+  "scripts": {
+    "start": "node bin/karen.js"
+  },
+  "keywords": [
+    "ai",
+    "agents",
+    "code-review",
+    "inspector",
+    "karen",
+    "pixelspace",
+    "cli"
+  ],
+  "author": "Pixelspace",
+  "license": "MIT",
+  "dependencies": {},
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pixelspace-studio/karen.git"
+  }
+}
